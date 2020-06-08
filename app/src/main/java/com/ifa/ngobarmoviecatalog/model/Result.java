@@ -52,7 +52,7 @@ public class Result implements Parcelable {
     @Expose
     private String releaseDate;
 
-    protected Result(Parcel in) {
+    public Result(Parcel in) {
         if (in.readByte() == 0) {
             popularity = null;
         } else {
@@ -97,6 +97,10 @@ public class Result implements Parcelable {
             return new Result[size];
         }
     };
+
+    public Result() {
+
+    }
 
     public Double getPopularity() {
         return popularity;
