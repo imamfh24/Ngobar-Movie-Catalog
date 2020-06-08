@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    >
+
+    <ImageView
+        android:id="@+id/imgMovie"
+        android:layout_width="125dp"
+        android:layout_height="175dp"
+        android:src="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="18dp"
+        android:textColor="#000"
+        android:text="INI JUDUL MOVIE"/>
+
+    <TextView
+        android:id="@+id/tvDeskripsi"
+        android:layout_toRightOf="@+id/imgMovie"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="4"
+        android:text="Lorem ipsum"/>
+
+</RelativeLayout>
