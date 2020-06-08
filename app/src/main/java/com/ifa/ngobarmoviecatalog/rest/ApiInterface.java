@@ -19,4 +19,11 @@ public interface ApiInterface {
             @Query("page") int page
     );
 
+    @GET("/3/search/movie")
+    Call<Response> getQuery(
+            @Query("api_key") String apikey,
+            @Query("language") String language,
+            @Query("query") String query,
+            @Query("page") int page
+    );
 }
