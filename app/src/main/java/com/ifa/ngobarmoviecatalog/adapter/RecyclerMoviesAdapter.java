@@ -1,6 +1,7 @@
 package com.ifa.ngobarmoviecatalog.adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -28,7 +29,13 @@ public class RecyclerMoviesAdapter extends RecyclerView.Adapter<RecyclerMoviesAd
     @NonNull
     @Override
     public RecyclerMoviesAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view;
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        view = inflater.inflate(R.layout.item_movie, parent, false);
+
+        RecyclerMoviesAdapter.MyViewHolder viewHolder = new RecyclerMoviesAdapter.MyViewHolder(view);
+
+        return viewHolder;
     }
 
     @Override
@@ -36,7 +43,7 @@ public class RecyclerMoviesAdapter extends RecyclerView.Adapter<RecyclerMoviesAd
         holder.tvTitle.setText(resultList.get(position).getTitle());
         holder.tvDescription.setText(resultList.get(position).getOverview());
         Glide.with(mContext)
-                .load("" + resultList.get(position).getPosterPath())
+                .load("https://image.tmdb.org/t/p/w185" + resultList.get(position).getPosterPath())
                 .into(holder.ivPoster);
     }
 
