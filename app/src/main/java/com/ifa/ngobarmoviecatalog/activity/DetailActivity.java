@@ -1,8 +1,10 @@
-package com.ifa.ngobarmoviecatalog;
+package com.ifa.ngobarmoviecatalog.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.ifa.ngobarmoviecatalog.R;
 
 public class DetailActivity extends AppCompatActivity {
 
