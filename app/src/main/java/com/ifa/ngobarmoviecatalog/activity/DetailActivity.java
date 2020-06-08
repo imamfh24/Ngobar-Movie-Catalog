@@ -38,5 +38,19 @@ public class DetailActivity extends AppCompatActivity {
         Glide.with(getApplicationContext())
                 .load("https://image.tmdb.org/t/p/w185" + image)
                 .into(imgDetail);
+
+        // Membuat Title pada detail
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setTitle(title);
+        }
+
+        // Tombol Arah panah balik
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return super.onSupportNavigateUp();
     }
 }
